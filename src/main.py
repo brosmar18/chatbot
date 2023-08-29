@@ -1,4 +1,10 @@
 from textblob import TextBlob
+import spacy 
+
+# Load spaCy model 
+nlp = spacy.load("en_core_web_sm")
+
+
 
 # Analyze the sentiment of the user input and return a response
 def analyze_sentiment(user_input):
