@@ -42,19 +42,27 @@ def on_send():
 root = tk.Tk()
 root.title("Chatbot")
 
-# Create a text area for chat
-chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15)
+# Styling the main window
+root.configure(bg="light blue")
+
+
+# Text area for chat with styles.
+chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15, bg="white", fg="black", font=("Arial", 12))
 chat_area.pack(padx=10, pady=10)
 
 # Call greet_user to display greenting when app launches
 greet_user()
 
-# Entry box for user input
-user_entry = ttk.Entry(root, width=50)
+# Entry box for user input with styles.
+user_entry = ttk.Entry(root, width=50, font=("Arial", 12))
 user_entry.pack(padx=10, pady=5)
 
-# Send button
-send_button = ttk.Button(root, text="Send", command=on_send)
+# Send button with styles. 
+send_button = ttk.Button(root, text="Send", command=on_send, style="C.TButton")
 send_button.pack(pady=5)
+
+# Custom button style.
+style = ttk.Style()
+style.configure("C.TButton", font=("Arial", 12, "bold"))
 
 root.mainloop()
