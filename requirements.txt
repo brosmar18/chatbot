@@ -1,0 +1,8 @@
+# Core Python libraries
+# Tkinter is generally preinstalled with Python, so you may not need to include it here.
+
+# Natural Language Processing
+spacy>=3.1.3
+
+# Other dependencies
+# Add any other libraries you might have used
