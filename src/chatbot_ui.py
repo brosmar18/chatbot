@@ -61,4 +61,8 @@ user_entry.pack(padx=10, pady=5)
 send_button = ttk.Button(root, text="Send", command=on_send, style="C.TButton")
 send_button.pack(pady=5)
 
+# Custom button style.
+style = ttk.Style()
+style.configure("C.TButton", font=("Arial", 12, "bold"))
+
 root.mainloop()
