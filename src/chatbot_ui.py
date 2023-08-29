@@ -12,3 +12,7 @@ def on_send():
 root = tk.Tk()
 root.title("Chatbot")
 
+# Create a text area for chat
+chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15)
+chat_area.pack(padx=10, pady=10)
+
