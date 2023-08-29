@@ -24,3 +24,4 @@ user_entry.pack(padx=10, pady=5)
 send_button = ttk.Button(root, text="Send", command=on_send)
 send_button.pack(pady=5)
 
+root.mainloop()
