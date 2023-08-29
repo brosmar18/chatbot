@@ -20,3 +20,7 @@ chat_area.pack(padx=10, pady=10)
 user_entry = ttk.Entry(root, width=50)
 user_entry.pack(padx=10, pady=5)
 
+# Send button
+send_button = ttk.Button(root, text="Send", command=on_send)
+send_button.pack(pady=5)
+
