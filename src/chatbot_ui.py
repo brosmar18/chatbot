@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
+from main import handle_simple_conversation
 
 def greet_user():
 
@@ -22,7 +23,11 @@ def on_send():
     user_input = user_entry.get()
     # TODO: Process user input and get chatbot response
     chat_area.insert(tk.END, f"You: {user_input}\n")
-    chat_area.insert(tk.END, f"Chatbot: I'm still learning...\n")
+    
+    # Handle simple convos and get chatbot's response
+    chatbot_response = handle_simple_conversation(user_input)
+
+    chat_area.insert(tk.END, f"Chatbot: {chatbot_response}\n")
     user_entry.delete(0, tk.END)
 
 # Create the main window
