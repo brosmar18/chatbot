@@ -18,4 +18,6 @@ def greet_user():
 
     print(f"{greeting}, welcome to chatbot!")
 
-    
+
+# Call the function
+greet_user()
