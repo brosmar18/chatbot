@@ -42,8 +42,12 @@ def on_send():
 root = tk.Tk()
 root.title("Chatbot")
 
-# Create a text area for chat
-chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15)
+# Styling the main window
+root.configure(bg="light blue")
+
+
+# Text area for chat with styles.
+chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15, bg="white", fg="black", font=("Arial", 12))
 chat_area.pack(padx=10, pady=10)
 
 # Call greet_user to display greenting when app launches
