@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
+from main import handle_simple_conversation
 
 def greet_user():
 
