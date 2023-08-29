@@ -16,3 +16,7 @@ root.title("Chatbot")
 chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15)
 chat_area.pack(padx=10, pady=10)
 
+# Entry box for user input
+user_entry = ttk.Entry(root, width=50)
+user_entry.pack(padx=10, pady=5)
+
