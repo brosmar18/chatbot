@@ -1,5 +1,22 @@
 import tkinter as tk
 from tkinter import ttk
+from datetime import datetime
+
+def greet_user():
+
+    # Greet user based on current time of the day. 
+    # Get current time.
+    current_time = datetime.now().time()
+
+    # Determine greeting based on time. 
+    if current_time.hour < 12:
+        greeting = "Good Morning"
+    elif 12 <= current_time.hour < 18:
+        greeting = "Good Afternoon"
+    else: 
+        greeting = "Good Evening"
+
+    chat_area.insert(tk.END, f"{greeting}, welcome to chatbot!\n")
 
 def on_send():
     user_input = user_entry.get()
@@ -15,6 +32,9 @@ root.title("Chatbot")
 # Create a text area for chat
 chat_area = tk.Text(root, wrap=tk.WORD, width=50, height=15)
 chat_area.pack(padx=10, pady=10)
+
+# Call greet_user to display greenting when app launches
+greet_user()
 
 # Entry box for user input
 user_entry = ttk.Entry(root, width=50)
