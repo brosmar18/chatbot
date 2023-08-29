@@ -1,0 +1,11 @@
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+chatbot_env/
+
+# IDE specific
+.vscode/
+.idea/
