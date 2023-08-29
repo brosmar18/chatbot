@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
-from main import handle_simple_conversation, handle_knowledge_query
+from main import handle_simple_conversation, handle_knowledge_query, analyze_sentiment
 
 def greet_user():
 
@@ -30,6 +30,10 @@ def on_send():
     # If the response is the default "I don't understand", try the knowledge base. 
     if chatbot_response == "I'm sorry, I don't understand that.":
         chatbot_response = handle_knowledge_query(user_input)
+
+    # If teh response is still the default, perform sentiment analysis
+    if chatbot_response == "I'm sorry, I don't have that information.":
+        chatbot_response = analyze_sentiment(user_input)
 
     chat_area.insert(tk.END, f"Chatbot: {chatbot_response}\n")
     user_entry.delete(0, tk.END)
