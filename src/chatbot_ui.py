@@ -57,8 +57,8 @@ greet_user()
 user_entry = ttk.Entry(root, width=50, font=("Arial", 12))
 user_entry.pack(padx=10, pady=5)
 
-# Send button
-send_button = ttk.Button(root, text="Send", command=on_send)
+# Send button with styles. 
+send_button = ttk.Button(root, text="Send", command=on_send, style="C.TButton")
 send_button.pack(pady=5)
 
 root.mainloop()
