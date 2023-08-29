@@ -1,3 +1,15 @@
+from textblob import TextBlob
+
+# Analyze the sentiment of the user input and return a response
+def analyze_sentiment(user_input):
+    analysis = TextBlob(user_input)
+    if analysis.sentiment.polarity > 0:
+        return "You seem happy, that's great!"
+    elif analysis.sentiment.polarity < 0:
+        return "You seem unhappy, is there anything I can do?"
+    else: 
+        return "You seem neutral, how can I assist you further?"
+
 simple_responses = {
     "hello": "Hi there!",
     "how are you": "I'm just a program, so I don't have feelings, but thanks for asking!",
