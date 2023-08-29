@@ -8,7 +8,15 @@ def greet_user():
     # Get current time.
     current_time = datetime.now().time()
 
+    # Determine greeting based on time. 
+    if current_time.hour < 12:
+        greeting = "Good Morning"
+    elif 12 <= current_time.hour < 18:
+        greeting = "Good Afternoon"
+    else: 
+        greeting = "Good Evening"
 
+    chat_area.insert(tk.END, f"{greeting}, welcome to chatbot!\n")
 
 def on_send():
     user_input = user_entry.get()
