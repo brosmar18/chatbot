@@ -53,8 +53,8 @@ chat_area.pack(padx=10, pady=10)
 # Call greet_user to display greenting when app launches
 greet_user()
 
-# Entry box for user input
-user_entry = ttk.Entry(root, width=50)
+# Entry box for user input with styles.
+user_entry = ttk.Entry(root, width=50, font=("Arial", 12))
 user_entry.pack(padx=10, pady=5)
 
 # Send button
