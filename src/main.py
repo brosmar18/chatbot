@@ -1,4 +1,23 @@
 from textblob import TextBlob
+import spacy 
+
+# Load spaCy model 
+nlp = spacy.load("en_core_web_sm")
+
+def handle_advanced_conversation(user_input):
+    """
+    Handle advanced conversation using spaCy's NLP capabilities.
+    """
+    doc = nlp(user_input)
+    for ent in doc.ents:
+        if ent.label_ == "GPE":
+            return f"You're talking about {ent.text}, that's a place!"
+        elif ent.label_ == "PERSON":
+            return f"You mentioned {ent.text}, is that a person you know?"
+        elif ent.label_ == "TIME":
+            return f"You mentioned a time: {ent.text}. Is there an event?"
+        # Add more entity types and responses
+    return "I'm sorry, I couldn't find any specific entities in your message."
 
 # Analyze the sentiment of the user input and return a response
 def analyze_sentiment(user_input):
