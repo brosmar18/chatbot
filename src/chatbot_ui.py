@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
-from main import handle_simple_conversation
+from main import handle_simple_conversation, handle_knowledge_query
 
 def greet_user():
 
@@ -26,6 +26,10 @@ def on_send():
     
     # Handle simple convos and get chatbot's response
     chatbot_response = handle_simple_conversation(user_input)
+
+    # If the response is the default "I don't understand", try the knowledge base. 
+    if chatbot_response == "I'm sorry, I don't understand that.":
+        chatbot_response = handle_knowledge_query(user_input)
 
     chat_area.insert(tk.END, f"Chatbot: {chatbot_response}\n")
     user_entry.delete(0, tk.END)
