@@ -45,7 +45,7 @@ def handle_simple_conversation(user_input):
 knowledge_base = {
     "what is your name": "I'm a chatbot created to assist you.",
     "what is the capital of france": "The capital of France is Paris.",
-    "who is the president of the united states": "As of my last update in September 2021, the President is Joe Biden.",
+    "who is the president of the united states": "As of my last update in September 2022, the President is Joe Biden.",
     # Add more questions and answers here
 }
 
